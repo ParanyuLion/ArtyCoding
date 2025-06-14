@@ -17,9 +17,9 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
+	get_input()
 	rotation += rotation_direction * rotation_speed * delta
 	move_and_slide()
-
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7av28"]
@@ -38,3 +38,5 @@ shape = SubResource("RectangleShape2D_7av28")
 texture = ExtResource("1_2gydr")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
