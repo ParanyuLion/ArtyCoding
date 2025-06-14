@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://brju7qhqrliny"]
+[gd_scene load_steps=4 format=3 uid="uid://bhkgmwv5xph3o"]
 
-[ext_resource type="PackedScene" uid="uid://byedvj4h8khg2" path="res://scene/dek_ku.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://jwjexrebxgsw" path="res://scene/dek_ku.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dlwkcu0hcr8ys" path="res://scene/Player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://31ukv85kfc0y" path="res://scene/bus_stop.tscn" id="3_lk8hp"]
 
 [node name="main" type="Node2D"]
 
@@ -10,6 +11,10 @@ position = Vector2(-148, 4)
 
 [node name="TalaiBus" parent="." instance=ExtResource("2_h2yge")]
 position = Vector2(-1, -4)
+rotation = 0.0298858
 
 [node name="Camera2D" type="Camera2D" parent="TalaiBus"]
 position = Vector2(1, 4)
+
+[node name="Bus_stop" parent="." instance=ExtResource("3_lk8hp")]
+position = Vector2(-51, -64)
