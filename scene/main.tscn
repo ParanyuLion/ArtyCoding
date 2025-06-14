@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://brju7qhqrliny"]
+
+[ext_resource type="PackedScene" uid="uid://byedvj4h8khg2" path="res://scene/dek_ku.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dlwkcu0hcr8ys" path="res://scene/Player.tscn" id="2_h2yge"]
+
+[node name="main" type="Node2D"]
+
+[node name="DekKu" parent="." instance=ExtResource("1_0xm2m")]
+position = Vector2(-148, 4)
+
+[node name="TalaiBus" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(-1, -4)
+
+[node name="Camera2D" type="Camera2D" parent="TalaiBus"]
+position = Vector2(1, 4)
