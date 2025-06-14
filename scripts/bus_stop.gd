@@ -1,4 +1,3 @@
-# Bus_stop.gd
 extends Area2D
 
 signal bus_arrived  # 🧨 ประกาศ signal
