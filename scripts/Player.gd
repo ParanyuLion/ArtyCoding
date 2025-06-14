@@ -14,36 +14,29 @@ var acceleration = Vector2.ZERO
 #var velocity = Vector2
 var steer_angle
 #var students_on_board := 0
+@export var dekku_exit_scene: PackedScene
+@onready var exit_point = $ExitPoint
+@onready var exit_target = $ExitTarget
 
 func register_student():
 	Global.student_on_bus += 1
 	print("🚌 มีนักเรียนขึ้นรถแล้ว: ", Global.student_on_bus)
 
 func leaving_student():
-	var leave_num = randi_range(0, Global.student_on_bus)
-	if Global.student_on_bus >= 1:
-		Global.student_on_bus -= leave_num
-		Global.score += leave_num
-	print("XXXXXXXX มีนักเรียนลงรถแล้ว: ", Global.student_on_bus)
+	if Global.student_on_bus <= 0:
+		return
+	
+	Global.student_on_bus -= 1
+	Global.score += 1
+	print("🎒 นักเรียนลงรถ! เหลือ:", Global.student_on_bus)
 
-	for i in range(3):
-		var node_path = "main/DekKu" + str(i+1)
+	# สร้าง DekKUExit
+	var dek_exit = dekku_exit_scene.instantiate()
+	dek_exit.global_position = exit_point.global_position
+	get_tree().current_scene.add_child(dek_exit)
 
-		if has_node(node_path):
-			var dekku = get_node(node_path)
-			dekku.visible = true
-			dekku.modulate.a = 1
-
-			# Ensure each Dekku object has an AnimationPlayer
-			var anim_player = dekku.get_node("AnimationPlayer")
-			if anim_player:
-				anim_player.play("fade_in")
-			else:
-				print("AnimationPlayer not found in", node_path)
-		else:
-			print("Node not found:", node_path)
-
-	return leave_num
+	# สั่งให้เดินไปเป้าหมาย
+	dek_exit.start_walking_to(exit_target.global_position)
 
 func get_input():
 	var turn = 0
