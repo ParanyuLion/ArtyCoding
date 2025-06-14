@@ -3,18 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://jwjexrebxgsw" path="res://scene/dek_ku.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dlwkcu0hcr8ys" path="res://scene/Player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://31ukv85kfc0y" path="res://scene/bus_stop.tscn" id="3_lk8hp"]
-[ext_resource type="Script" path="res://scripts/student.gd" id="4_tfwx3"]
+[ext_resource type="Script" uid="uid://qgaooenkd7he" path="res://scripts/student.gd" id="4_tfwx3"]
 [ext_resource type="PackedScene" uid="uid://b54jve7oekjor" path="res://scene/ui.tscn" id="5_friyx"]
 
 [node name="main" type="Node2D"]
 
-[node name="Bus_stop" parent="." instance=ExtResource("3_lk8hp")]
+[node name="Bus_stop1" parent="." instance=ExtResource("3_lk8hp")]
 position = Vector2(213, 267)
 
 [node name="Bus_stop2" parent="." instance=ExtResource("3_lk8hp")]
 position = Vector2(964, 195)
 
-[node name="DekKu" parent="." instance=ExtResource("1_0xm2m")]
+[node name="DekKu1" parent="." instance=ExtResource("1_0xm2m")]
 position = Vector2(160, 171)
 
 [node name="DekKu2" parent="." instance=ExtResource("1_0xm2m")]

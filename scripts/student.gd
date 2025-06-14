@@ -15,4 +15,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		modulate.a = 0.0
 		is_active = false
 		visible = false
-
+	elif anim_name == "fade_in":
+		#is_active = true
+		visible = true
+		modulate.a = 1

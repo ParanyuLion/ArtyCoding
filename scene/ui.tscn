@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b54jve7oekjor"]
 
-[ext_resource type="Script" path="res://scripts/StudentOnBoard.gd" id="1_atg2w"]
-[ext_resource type="Script" path="res://scripts/Score.gd" id="2_2cq8y"]
+[ext_resource type="Script" uid="uid://bhm4ljrhl5xa8" path="res://scripts/StudentOnBoard.gd" id="1_atg2w"]
+[ext_resource type="Script" uid="uid://daepq7bwurq02" path="res://scripts/Score.gd" id="2_2cq8y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8gmey"]
 font_size = 36

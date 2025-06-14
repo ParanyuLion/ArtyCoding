@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlwkcu0hcr8ys"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_ntp2l"]
+[ext_resource type="Script" uid="uid://6s5p6mx20alm" path="res://scripts/Player.gd" id="1_ntp2l"]
 [ext_resource type="Texture2D" uid="uid://b76t3raoo5ftg" path="res://assets/Talai.png" id="2_n17gx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gqe6x"]
