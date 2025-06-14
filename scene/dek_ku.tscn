@@ -120,9 +120,7 @@ script = ExtResource("1_jx5d4")
 position = Vector2(10.5, -10.5)
 scale = Vector2(2.3125, 2.3125)
 sprite_frames = SubResource("SpriteFrames_g1wuk")
-animation = &"right"
-autoplay = "left"
-frame_progress = 0.585868
+animation = &"left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10.5, -9)

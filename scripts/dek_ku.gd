@@ -33,15 +33,15 @@ func _physics_process(delta):
 func play_walk_animation(dir: Vector2):
 	if abs(dir.x) > abs(dir.y):
 		if dir.x > 0:
-			anim.play("walk_right")
+			anim.play("right")
 			last_direction = "right"
 		else:
-			anim.play("walk_left")
+			anim.play("left")
 			last_direction = "left"
 	else:
 		if dir.y > 0:
-			anim.play("walk_down")
+			anim.play("down")
 			last_direction = "down"
 		else:
-			anim.play("walk_up")
+			anim.play("up")
 			last_direction = "up"
