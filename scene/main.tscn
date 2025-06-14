@@ -6,15 +6,25 @@
 
 [node name="main" type="Node2D"]
 
+[node name="Bus_stop" parent="." instance=ExtResource("3_lk8hp")]
+position = Vector2(-128, -70)
+
+[node name="Bus_stop2" parent="." instance=ExtResource("3_lk8hp")]
+position = Vector2(573, -243)
+
 [node name="DekKu" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(-148, 4)
+position = Vector2(-181, -166)
+
+[node name="DekKu2" parent="." instance=ExtResource("1_0xm2m")]
+position = Vector2(-218, 27)
+
+[node name="DekKu3" parent="." instance=ExtResource("1_0xm2m")]
+position = Vector2(461, -309)
 
 [node name="TalaiBus" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(-1, -4)
+position = Vector2(212, -2)
 rotation = 0.0298858
+scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="TalaiBus"]
 position = Vector2(1, 4)
-
-[node name="Bus_stop" parent="." instance=ExtResource("3_lk8hp")]
-position = Vector2(-51, -64)

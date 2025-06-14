@@ -1,16 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://31ukv85kfc0y"]
+[gd_scene load_steps=6 format=3 uid="uid://31ukv85kfc0y"]
 
-[ext_resource type="Script" path="res://scripts/bus_stop.gd" id="1_g51yx"]
+[ext_resource type="Script" uid="uid://hkbeou3i03b3" path="res://scripts/bus_stop.gd" id="1_g51yx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2c4s3"]
 size = Vector2(104, 139)
+
+[sub_resource type="Gradient" id="Gradient_wkeg8"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n57hs"]
+gradient = SubResource("Gradient_wkeg8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aeu2y"]
+size = Vector2(256, 249)
 
 [node name="Bus_stop" type="Area2D"]
 script = ExtResource("1_g51yx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(42, 59.5)
 shape = SubResource("RectangleShape2D_2c4s3")
 debug_color = Color(0.286275, 0.627451, 0.2, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.999997, -0.49999)
+scale = Vector2(0.40625, 135)
+texture = SubResource("GradientTexture1D_n57hs")
+
+[node name="ChildDetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChildDetectionArea"]
+shape = SubResource("RectangleShape2D_aeu2y")
