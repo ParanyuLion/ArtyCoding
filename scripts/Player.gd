@@ -12,13 +12,18 @@ var max_speed_reverse = 250
 var acceleration = Vector2.ZERO
 #var velocity = Vector2
 var steer_angle
-
-
-var students_on_board := 0
+#var students_on_board := 0
 
 func register_student():
-	students_on_board += 1
-	print("🚌 มีนักเรียนขึ้นรถแล้ว: ", students_on_board)
+	Global.student_on_bus += 1
+	print("🚌 มีนักเรียนขึ้นรถแล้ว: ", Global.student_on_bus)
+
+func leaving_student():
+	if Global.student_on_bus >= 1:
+		var leave_num = randi_range(0, Global.student_on_bus)
+		Global.student_on_bus -= leave_num
+		Global.score += leave_num
+	print("XXXXXXXX มีนักเรียนลงรถแล้ว: ", Global.student_on_bus)
 
 func get_input():
 	var turn = 0

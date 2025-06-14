@@ -1,29 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhkgmwv5xph3o"]
+[gd_scene load_steps=6 format=3 uid="uid://bhkgmwv5xph3o"]
 
 [ext_resource type="PackedScene" uid="uid://jwjexrebxgsw" path="res://scene/dek_ku.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dlwkcu0hcr8ys" path="res://scene/Player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://31ukv85kfc0y" path="res://scene/bus_stop.tscn" id="3_lk8hp"]
+[ext_resource type="Script" path="res://scripts/student.gd" id="4_tfwx3"]
+[ext_resource type="PackedScene" uid="uid://b54jve7oekjor" path="res://scene/ui.tscn" id="5_friyx"]
 
 [node name="main" type="Node2D"]
 
 [node name="Bus_stop" parent="." instance=ExtResource("3_lk8hp")]
-position = Vector2(-128, -70)
+position = Vector2(213, 267)
 
 [node name="Bus_stop2" parent="." instance=ExtResource("3_lk8hp")]
-position = Vector2(573, -243)
+position = Vector2(964, 195)
 
 [node name="DekKu" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(-181, -166)
+position = Vector2(160, 171)
 
 [node name="DekKu2" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(-218, 27)
+position = Vector2(123, 364)
 
 [node name="DekKu3" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(461, -309)
+position = Vector2(852, 129)
 
 [node name="TalaiBus" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(212, -2)
+position = Vector2(580, 326)
 rotation = 0.0298858
 
 [node name="Camera2D" type="Camera2D" parent="TalaiBus"]
 position = Vector2(1, 4)
+
+[node name="student" type="Node2D" parent="."]
+script = ExtResource("4_tfwx3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="student"]
+
+[node name="Sprite2D" type="Sprite2D" parent="student"]
+
+[node name="UI" parent="." instance=ExtResource("5_friyx")]

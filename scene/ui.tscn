@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b54jve7oekjor"]
+
+[ext_resource type="Script" path="res://scripts/StudentOnBoard.gd" id="1_atg2w"]
+[ext_resource type="Script" path="res://scripts/Score.gd" id="2_2cq8y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gmey"]
+font_size = 36
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="StudentOnBoard" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 8.0
+offset_right = 336.0
+offset_bottom = 58.0
+text = "Student On Board: "
+label_settings = SubResource("LabelSettings_8gmey")
+script = ExtResource("1_atg2w")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 63.0
+offset_right = 189.0
+offset_bottom = 113.0
+text = "Score: "
+label_settings = SubResource("LabelSettings_8gmey")
+script = ExtResource("2_2cq8y")
