@@ -24,7 +24,6 @@ position = Vector2(461, -309)
 [node name="TalaiBus" parent="." instance=ExtResource("2_h2yge")]
 position = Vector2(212, -2)
 rotation = 0.0298858
-scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="TalaiBus"]
 position = Vector2(1, 4)

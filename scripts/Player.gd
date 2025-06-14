@@ -12,6 +12,14 @@ var max_speed_reverse = 250
 var acceleration = Vector2.ZERO
 #var velocity = Vector2
 var steer_angle
+
+
+var students_on_board := 0
+
+func register_student():
+	students_on_board += 1
+	print("🚌 มีนักเรียนขึ้นรถแล้ว: ", students_on_board)
+
 func get_input():
 	var turn = 0
 	if Input.is_action_pressed("right"):

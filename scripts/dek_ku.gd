@@ -25,6 +25,7 @@ func _physics_process(delta):
 		var collision = move_and_collide(velocity * delta)
 		if collision and collision.get_collider() == talai_bus:
 			print("✅ DekKu: ถึงรถแล้ว")
+			talai_bus.register_student()
 			walking = false
 			velocity = Vector2.ZERO
 			anim.stop()
