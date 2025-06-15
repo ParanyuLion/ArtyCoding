@@ -6,8 +6,8 @@
 size = Vector2(104, 139)
 
 [sub_resource type="Gradient" id="Gradient_wkeg8"]
-offsets = PackedFloat32Array(0.990196, 1)
-colors = PackedColorArray(0, 0.710684, 0, 0.298039, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.980392, 1)
+colors = PackedColorArray(0, 1, 0, 0.270588, 0.233327, 0.498479, 0.285642, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_n57hs"]
 gradient = SubResource("Gradient_wkeg8")
@@ -31,4 +31,3 @@ texture = SubResource("GradientTexture1D_n57hs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChildDetectionArea"]
 shape = SubResource("RectangleShape2D_aeu2y")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)

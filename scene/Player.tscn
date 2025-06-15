@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://b76t3raoo5ftg" path="res://assets/Talai.png" id="2_n17gx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gqe6x"]
-size = Vector2(129, 81)
+size = Vector2(129, 125)
 
 [node name="TalaiBus" type="CharacterBody2D"]
 script = ExtResource("1_ntp2l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_gqe6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

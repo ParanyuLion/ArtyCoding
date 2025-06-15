@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://31ukv85kfc0y" path="res://scene/bus_stop.tscn" id="3_lk8hp"]
 [ext_resource type="PackedScene" uid="uid://whrvr8po0gg2" path="res://scene/dek_ku_exit.tscn" id="4_hhg7j"]
 [ext_resource type="PackedScene" uid="uid://b54jve7oekjor" path="res://scene/ui.tscn" id="5_friyx"]
-[ext_resource type="PackedScene" uid="uid://bn3uv35oggi33" path="res://scene/KUmap.tscn" id="6_josut"]
+[ext_resource type="PackedScene" uid="uid://dxl0km65x8725" path="res://scene/KUmap (1).tscn" id="7_q8cfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6l7p"]
 size = Vector2(2550.25, 492)
@@ -118,11 +118,6 @@ position_smoothing_speed = 100.0
 
 [node name="UI" parent="." instance=ExtResource("5_friyx")]
 
-[node name="KUmap" parent="." instance=ExtResource("6_josut")]
-z_index = -1
-position = Vector2(-265, 3239)
-scale = Vector2(5, 5)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-3300, -6194)
 
@@ -217,3 +212,8 @@ shape = SubResource("RectangleShape2D_fbtta")
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(500, 5414)
 shape = SubResource("RectangleShape2D_fbtta")
+
+[node name="KUmap2" parent="." instance=ExtResource("7_q8cfe")]
+z_index = -1
+position = Vector2(-276, 3257)
+scale = Vector2(5, 5)
