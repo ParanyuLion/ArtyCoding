@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjeqypti3eia0"]
+
+[ext_resource type="Script" path="res://scripts/Main Menu.gd" id="1_t3112"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_t3112")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 344.0
+offset_right = 480.0
+offset_bottom = 375.0
+scale = Vector2(5.60603, 4.71006)
+text = "Start"
+text_overrun_behavior = 1
+
+[node name="Quit" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 502.0
+offset_right = 535.0
+offset_bottom = 533.0
+scale = Vector2(3.41707, 2.64141)
+text = "Quit"
+text_overrun_behavior = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 323)
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

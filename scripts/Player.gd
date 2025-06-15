@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 var friction = -0.9
 var drag = -0.0015
-var wheel_base = 70  # Distance from front to rear wheel
-var steering_angle = 15  # Amount that front wheel turns, in degrees
-var engine_power = 800  # Forward acceleration force.
-var slip_speed = 400  # Speed where traction is reduced
+var wheel_base = 100  # Distance from front to rear wheel
+var steering_angle = 13  # Amount that front wheel turns, in degrees
+var engine_power = 500  # Forward acceleration force.
+var slip_speed = 300  # Speed where traction is reduced
 var traction_fast = 0.1  # High-speed traction
 var traction_slow = 0.7  # Low-speed traction
 var braking = -450
@@ -27,6 +27,8 @@ func leaving_student():
 		return
 	
 	Global.student_on_bus -= 1
+	Global.student_left -= 1
+	
 	Global.score += 1
 	print("🎒 นักเรียนลงรถ! เหลือ:", Global.student_on_bus)
 
